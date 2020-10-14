@@ -49,7 +49,7 @@ class Bank:
         user_input=input().upper()
         if(user_input=="Y"):
             self._OpenBankForum()
-    
+    #Taking etail of customer
     def _OpenBankForum(self):
         print("\n{:^100s}\n".format(self.Bank_Name+" Registration Form "+", Contact Number - "+str(self.Bank_Contact)))
         Account_Holder=input("Enter Your Name :- ")
@@ -128,7 +128,7 @@ class ATM(Bank):
             if(show):
                 print("\n{:^100s}".format("Thanks for using "+Bank.Bank_Name))
 
-
+    #Withdrawal purpose
     def __Withdraw(self,Bank,withdraw_Amount,Account_Number):
         print("\n{:^10s}".format("Withdrawing ... \n"))
         chance=3
@@ -144,7 +144,7 @@ class ATM(Bank):
             chance-=1
         if(is_correct):
             print(Bank._WithdrawAmount(Account_Number,withdraw_Amount))
-
+    #to  show balance
     def __ShowBalance(self,Bank,Account_Number):
         print("\n{:^10s}".format("Showing Balance ... \n"))
         Time=str(datetime.datetime.now())[:19]
